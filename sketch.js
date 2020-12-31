@@ -91,7 +91,7 @@ function keyPressed(){
 		Matter.Body.translate(packageBody, translation)
 	}
 
-	if (KeyCode === DOWN_ARROW) {
-		Matter.Body.setStatic(packageBody,false);
-	}
-}
+	 if (keyCode === DOWN_ARROW)){
+           Matter.Body.setStatic(packageBody,false);
+       }
+     }

@@ -71,7 +71,6 @@ function draw() {
   rectMode(CENTER);
   background(0);
  
-  packageBody.x= helicopterSprite.position.x;
   packageSprite.x= packageBody.position.x 
   packageSprite.y= packageBody.position.y 
 
@@ -82,12 +81,16 @@ function draw() {
 }
 
 function keyPressed(){
-	if (keyWentDown(RIGHT_ARROW)) {
-		helicopterSprite.velocityX = 2;
+	if (keyCode === LEFT_ARROW) {
+		helicopterSprite.x = helicopterSprite.x-20;
+		translation={x:-20,y:0}
+		Matter.Body.translate(packageBody, translation)
 	} 
 
-	if (keyWentDown(LEFT_ARROW)) {
-		helicopterSprite.velocityX = -2;
+	if (keyCode === RIGHT_ARROW) {
+		helicopterSprite.x = helicopterSprite.x-20;
+		translation={x:-20,y:0}
+		Matter.Body.translate(packageBody, translation)
 	}
 
 	if (KeyDown(DOWN_ARROW)) {

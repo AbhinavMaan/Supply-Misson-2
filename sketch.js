@@ -93,7 +93,7 @@ function keyPressed(){
 		Matter.Body.translate(packageBody, translation)
 	}
 
-	if (KeyDown(DOWN_ARROW)) {
+	if (KeyCode === DOWN_ARROW) {
 		Matter.Body.setStatic(packageBody,false);
 	}
 }
